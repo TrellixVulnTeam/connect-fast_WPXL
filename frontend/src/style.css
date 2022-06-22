@@ -1,0 +1,44 @@
+/* link here to matching colors https://mycolor.space/?hex=%238AAAE5&sub=1 */
+
+html {
+    background-color: #F4F9FF;
+    text-align: center;
+    color: white;
+}
+
+body {
+    margin: 0;
+    color: #404756;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+    height: 100vh;
+    text-align: center;
+}
+
+
+
+
+/* LETS CREATE MORE GENERIC SETTINGS. 
+ */
+ main{
+    display:flex;
+    flex-direction: column;
+}
+
+.content h1{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 24px;
+}
