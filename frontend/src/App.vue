@@ -45,7 +45,7 @@ export default {
             />
           <router-link to="/settings">Settings</router-link>
         </div>
-         <div class="nav-item" >
+         <div class="nav-item"  @click="$router.push('/contracts')" >
            <img
               class="nav-item-icon"
               src="./assets/icons/file-1.svg"

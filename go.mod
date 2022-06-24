@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/ethereum/go-ethereum v1.10.19
 	github.com/tse-lao/ether-user v0.0.0-20220617074446-d8251f4daa9c
-	github.com/tse-lao/ipfs-user v0.0.1
+	github.com/tse-lao/ipfs-user v0.0.6
 	github.com/wailsapp/wails/v2 v2.0.0-beta.36
 	golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
 )

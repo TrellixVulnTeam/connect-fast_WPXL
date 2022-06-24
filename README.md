@@ -6,10 +6,11 @@ This is the official Wails Vue template.
 
 ## Live Development
 
-To run in live development mode, run `wails dev` in the project directory. In another terminal, go into the `frontend`
-directory and run `npm run dev`. The frontend dev server will run on http://localhost:34115. Connect to this in your
-browser and connect to your application.
+We have built and integrated it according the the standards used for GO and Vue. 
+More information can be found on connect-fast.com
 
-## Building
 
-To build a redistributable, production mode package, use `wails build`.
+## Special THANK TO: 
+wails.io 
+ethereum.com
+ipfs.io

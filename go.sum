@@ -96,8 +96,8 @@ github.com/tkrajina/go-reflector v0.5.6 h1:hKQ0gyocG7vgMD2M3dRlYN6WBBOmdoOzJ6njQ
 github.com/tkrajina/go-reflector v0.5.6/go.mod h1:ECbqLgccecY5kPmPmXg1MrHW585yMcDkVl6IvJe64T4=
 github.com/tse-lao/ether-user v0.0.0-20220617074446-d8251f4daa9c h1:+/SPt17voBuM3J4hsWA+n/dqaZLgMc8GhNU6JLkqMjU=
 github.com/tse-lao/ether-user v0.0.0-20220617074446-d8251f4daa9c/go.mod h1:cWRUL5+IKsZVJw1iMtTIqcnrgTmiD+oRrOVEuCEf2XE=
-github.com/tse-lao/ipfs-user v0.0.1 h1:2nAK3FxtCkG8+VFKgdgp895TjYU0oQw7xJp+RWIcJpI=
-github.com/tse-lao/ipfs-user v0.0.1/go.mod h1:SZrBKr+N6exNPMqGlc9VZeMPQ/+MLrdDEN1d6rUYdCg=
+github.com/tse-lao/ipfs-user v0.0.6 h1:I3NpwRksmhJT49hBy23BFPblthU/Udsf4Inx8lsAaEo=
+github.com/tse-lao/ipfs-user v0.0.6/go.mod h1:SZrBKr+N6exNPMqGlc9VZeMPQ/+MLrdDEN1d6rUYdCg=
 github.com/tyler-smith/go-bip39 v1.0.1-0.20181017060643-dbb3b84ba2ef h1:wHSqTBrZW24CsNJDfeh9Ex6Pm0Rcpc7qrgKBiL44vF4=
 github.com/valyala/bytebufferpool v1.0.0 h1:GqA5TC/0021Y/b9FG4Oi9Mr3q7XYx6KllzawFIhcdPw=
 github.com/valyala/bytebufferpool v1.0.0/go.mod h1:6bBcMArwyJ5K/AmCkWv1jt77kVWyCJ6HpOuEn7z0Csc=

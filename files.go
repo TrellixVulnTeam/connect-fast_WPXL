@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/tse-lao/ipfs-user/ipfs"
@@ -16,7 +17,6 @@ func (a *App) IpfsRun() {
 }
 func (a *App) StartIPFS() interface{} {
 	result := ipfs.RunDaemon()
-
 	return result
 }
 
@@ -26,9 +26,23 @@ func (a *App) StopIPFS() bool {
 	return true
 }
 
-func (a *App) ReadDirectory(path string) interface{} {
+func (a *App) ReadDirectory(path string) []ipfs.FileStatus {
 	result := ipfs.ReadDirectory(path)
+
+	return result
+}
+func (a *App) FileStat() ipfs.FileStatus {
+	result := ipfs.FileStat("/newProfile")
 	fmt.Println(result)
+
+	something := ipfs.FileStatus{}
+	b, err := json.Marshal(something)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(string(b))
+
 	return result
 }
 func (a *App) RemoveFile(path string) bool {
