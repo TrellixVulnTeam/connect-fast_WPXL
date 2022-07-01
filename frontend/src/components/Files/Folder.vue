@@ -28,7 +28,7 @@
   </main>
 </template>
 <script>
-import { CreateDirectory, FileStat, ReadDirectory } from "../../../wailsjs/go/main/App";
+import { CreateDirectory, FileStat, ReadDirectory, ReadFile } from "../../../wailsjs/go/main/App";
 import FileVue from "./File.vue";
 
 export default {
@@ -69,9 +69,18 @@ export default {
             this.getFiles(this.path)
         }
         else{
+          //this is a file and we need to read this. 
+            this.readFile(this.path + "/" +newPath)
             console.log("this is a file so we will be reading it")
         }
     }, 
+    readFile(path){
+      console.log(path);
+      ReadFile(path).then((result) => {
+        console.log("reading the file...")
+        console.log(result);
+      })
+    },
     createDirectory(name){
         // replaice all the whitespaces
         this.new_dir = this.new_dir.replaceAll(/\s/g,'')

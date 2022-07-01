@@ -40,6 +40,10 @@ img {
   display: flex;
   gap: 8px;
   width: 100%;
+  
+}
+.file:hover{
+  cursor:pointer;
 }
 .file div{
   margin: 4px 8px;

@@ -57,8 +57,10 @@ func (a *App) CreateDirectory(name string) bool {
 func (a *App) ReadFile(path string) []byte {
 	return ipfs.ReadFile(path)
 }
-func (a *App) AddFile(currentPath string, newPath string) bool {
-	status, _ := ipfs.AddFile(currentPath, newPath)
+func (a *App) AddFile(newPath, currentPath string) bool {
+	status, message := ipfs.AddFile(newPath, currentPath)
 
+	//here i need to cerate something that makes sure that
+	fmt.Println(message)
 	return status
 }

@@ -1,11 +1,13 @@
 <script>
-import { SelectFile } from '../../../wailsjs/go/main/App';
+import { AddFile, SelectFile } from '../../../wailsjs/go/main/App';
+import { store } from '../../compositions/store';
 import File from './File.vue';
 
 export default{
     data() {
         return {
             selectfiles: [],
+            store
         };
     },
     methods: {
@@ -39,6 +41,15 @@ export default{
             const encryptedString = EthCrypto.cipher.stringify(encrypt);
             console.log(encryptedString)
             
+        }, 
+        uploadFile(file){
+            //[√]need a path             
+            var newFilePath = store.filePath + "/" + file.name
+            console.log("AddFile(" +newFilePath+ "," + file.path +")")
+            AddFile(newFilePath, file.path).then((result) => {
+                console.log(result)
+            })
+            
         }
     },
     components: { File }
@@ -47,9 +58,10 @@ export default{
 <template>
 	<main>
 		<div class="content">
+            Path: {{store.filePath}}
 			<button @click="selectFile">Select file</button>
 		</div>
 		
-		<File v-for="file in selectfiles" :key="file.path" :file="file" @click="encryptFile('path') "/>
+		<File v-for="file in selectfiles" :key="file.path" :file="file" @click="uploadFile(file.path)" />
 	</main>
 </template>
