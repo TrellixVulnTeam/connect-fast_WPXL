@@ -1,12 +1,34 @@
+
+<template>
+  <main>
+    <div class="navigation-items">
+        <div @click="$router.push('/settings/')" :active="$route.matched.some(({ name }) => name === '')">
+          Overview
+        </div>
+        <div @click="$router.push('/settings/ethereum')">
+          Ethereum 
+        </div>
+        <div @click="$router.push('/settings/ipfs')">
+          IPFS
+        </div>
+    </div>
+
+    <div class="settings-content">
+      <router-view></router-view>
+    </div>
+  </main>
+</template>
+
 <script>
 import Address from "../components/Address.vue";
+import Title from "../components/DesignElements/Title.vue";
 import GenerateWallet from "../components/GenerateWallet.vue";
 
-//need to generate the params that are here. 
+//need to generate the params that are here.
 
 export default {
   name: "Settings",
-  components: { GenerateWallet, Address },
+  components: { GenerateWallet, Address, Title },
   data() {
     return {
       address: null,
@@ -14,71 +36,40 @@ export default {
   },
   methods: {
     getAddress() {
-        console.log("nothing here yet")
+      console.log("nothing here yet");
     },
   },
 };
 </script>
-<template>
-  <main>
-    <div class="left-items">
-      <ul>
-        <li @click="$router.push('/settings/')" :active="$route.matched.some(({ name }) => name === '')"
->Overview</li>
-        <li @click="$router.push('/settings/ethereum')">Ethereum Details</li>
-        <li @click="$router.push('/settings/ipfs')">IPFS.</li>
-      </ul>
-    </div>
-
-      <div class="settings-content">
-          <router-view></router-view>
-       
-      </div>
-    
-  </main>
-</template>
 
 <style scoped>
-main{
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    align-content: center;
-    
+.navigation-items {
+  display: flex;
+  flex-direction: row;
+  padding:  12px;
+  gap: 12px;
+  flex: 1;
 }
-.left-items{
-    padding: 32px 12px;
-    flex: 1;
-    
+.navigation-items {
+  border-radius: 6px;
+  padding-left: 0;
+  margin: 6px;
 }
-.left-items ul{
-  
-    border-radius: 6px;
-    
+.navigation-items div{
+  list-style-type: none;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 0px 0px;
+  font-weight: 600;
 }
-.left-items ul li{
-    list-style-type: none;
-    padding: 12px;
-    margin: 12px 0px;
-    font-weight: 600;
-    
-}
-.left-items ul li:hover{
-    background: #d0f4ec;
-    cursor: pointer;
+.navigation-items div:hover {
+  background: #d0f4ec;
+  cursor: pointer;
 }
 
-.active{
-    background: #b0f3e4;
-    border-radius: 8px;
+.active {
+  background: #b0f3e4;
+  border-radius: 8px;
 }
 
-/* SETTINGS CONTENT */
-.settings-content{
-    padding: 24px;
-    width: 100%;
-    flex:4;
-    display: flex;
-    flex-direction:column;
-}
 </style>

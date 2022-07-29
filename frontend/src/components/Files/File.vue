@@ -1,7 +1,7 @@
 <template>
    <div class="file">
       <div class="type" v-if="file.fileType == 'directory'">
-         <img src="../../assets/icons/folder.svg" />
+          <img src="../../assets/icons/folder.svg" />
       </div>
       <div class="type" v-else>
          <img src="../../assets/icons/file-1.svg" />
@@ -12,13 +12,15 @@
         {{file.last_modified}}
         </span>
       </div>
-      <div class="size">
+      <div class="size" v-if="file.fileType == 'directory'">       
+        xx items
+      </div>
+      <div class="size" v-else>       
         {{Math.round(file.size /10000, 2)/100}} MB
       </div>
-      <div class="contract">
-        Integrated contract.   
+      <div class="options"> 
+        <img src="../../assets/icons/interface-sign/more-alt.svg" @click="console.log('something')" />
       </div>
-      
    </div>  
 </template>
 <script>
@@ -38,12 +40,21 @@ img {
 }
 .file{
   display: flex;
+  font-family: monospace;
   gap: 8px;
   width: 100%;
-  
+  align-content: center;
+  align-items: center;
+  background: #21212a;
+  color: #afafb2;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 8px;
 }
 .file:hover{
   cursor:pointer;
+  background: #313138;
 }
 .file div{
   margin: 4px 8px;
@@ -58,12 +69,12 @@ span::before{
   flex: 2;
 }
 .name {
-  flex:3 
+  flex:6;
+  align-content: center;
 }
-.type{
-  flex: 1
+.file .options{
+  transform: rotate(90deg);
+  height: 8px;
 }
-.size{
-  flex:1
-}
+
 </style>

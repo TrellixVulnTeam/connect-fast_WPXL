@@ -16,6 +16,7 @@
     "eth-crypto": "^2.3.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15",
+    "vue-toastification": "^1.7.14",
     "vue-upload-component": "^2.8.22",
     "vuetify": "^2.6.6",
     "vuex": "^4.0.2"
@@ -24,6 +25,7 @@
     "@vitejs/plugin-vue": "^2.3.1",
     "node-sass": "^7.0.1",
     "sass-loader": "^13.0.0",
-    "vite": "^2.9.5"
+    "vite": "^2.9.5",
+    "vue-svg-loader": "^0.16.0"
   }
 }

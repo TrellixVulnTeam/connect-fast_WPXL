@@ -54,8 +54,11 @@ func (a *App) CreateDirectory(name string) bool {
 	fmt.Println(message)
 	return status
 }
-func (a *App) ReadFile(path string) []byte {
-	return ipfs.ReadFile(path)
+func (a *App) ReadFile(path string) string {
+
+	data := ipfs.ReadFile(path)
+
+	return string(data)
 }
 func (a *App) AddFile(newPath, currentPath string) bool {
 	status, message := ipfs.AddFile(newPath, currentPath)

@@ -3,14 +3,15 @@ module changeme
 go 1.17
 
 require (
-	github.com/ethereum/go-ethereum v1.10.19
-	github.com/tse-lao/ether-user v0.0.0-20220617074446-d8251f4daa9c
+	github.com/ethereum/go-ethereum v1.10.20
+	github.com/tse-lao/ether-user v0.0.0-20220729100445-e1e6d65976e8
 	github.com/tse-lao/ipfs-user v0.0.6
-	github.com/wailsapp/wails/v2 v2.0.0-beta.36
-	golang.org/x/crypto v0.0.0-20220525230936-793ad666bf5e
+	github.com/wailsapp/wails/v2 v2.0.0-beta.39.2
+	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa
 )
 
 require (
+	github.com/bep/debounce v1.2.1 // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.2.0 // indirect
 	github.com/deckarep/golang-set v1.8.0 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1 // indirect
@@ -23,7 +24,6 @@ require (
 	github.com/labstack/echo/v4 v4.7.2 // indirect
 	github.com/labstack/gommon v0.3.1 // indirect
 	github.com/leaanthony/go-ansi-parser v1.5.0 // indirect
-	github.com/leaanthony/go-common-file-dialog v1.0.3 // indirect
 	github.com/leaanthony/gosod v1.0.3 // indirect
 	github.com/leaanthony/slicer v1.6.0 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
@@ -41,7 +41,7 @@ require (
 	github.com/wailsapp/mimetype v1.4.1 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	golang.org/x/net v0.0.0-20220615171555-694bf12d69de // indirect
-	golang.org/x/sys v0.0.0-20220615213510-4f61da869c0c // indirect
+	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f // indirect
 	golang.org/x/text v0.3.7 // indirect
 	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce // indirect
 )

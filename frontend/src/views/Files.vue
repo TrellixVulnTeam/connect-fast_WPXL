@@ -1,24 +1,23 @@
 <template>
-  <div class="files">
-
-    <div>
-       <Uploadfile />
-    </div>
-     <h1>File Management</h1> 
-        <Folder />
+  <main>
+    <Title title="Files" />
+    <Folder />
    
-   
-  </div>
+    <AddContent />
+  </main>
+  
 </template>
 
 <script>
 import { OpenMessage } from '../../wailsjs/go/main/App';
+import Title from '../components/DesignElements/Title.vue';
+import AddContent from '../components/Files/AddContent.vue';
 import Folder from '../components/Files/Folder.vue';
 import Uploadfile from '../components/Files/Uploadfile.vue';
 
 export default {
     name: "Files",
-    components: { Uploadfile, Folder }, 
+    components: { Uploadfile, Folder, AddContent, Title }, 
     methods:{
       message(){
         OpenMessage();

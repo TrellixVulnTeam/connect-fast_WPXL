@@ -1,7 +1,6 @@
 <template>
-  <main>
-    <div class="content">
-      <h1>IPFS Settings</h1>
+  <div>
+     <Title title="ipfs_settings" /> 
       <div>
         <button class="success" v-if="!connected" @click="connect">
           Connect IPFS.
@@ -20,37 +19,41 @@
           <span class="time">{{ Date(output.date) }}</span>
         </div>
       </div>
-    </div>
-  </main>
+  </div>
+     
 </template>
+
+
 <script>
 import { StartIPFS, StopIPFS } from "../../../wailsjs/go/main/App";
+import Title from "../DesignElements/Title.vue";
 
 export default {
-  name: "IPFS Settings",
-  data() {
-    return {
-      connected: false,
-      outputs: [],
-    };
-  },
-  methods: {
-    connect() {
-      this.connected = true;
-      this.outputs.push({ date: Date.now(), detail: "connected" });
-      StartIPFS().then((result) => {
-        console.log(result);
-        for (let i = 0; i < result.length; i++) {
-          this.outputs.push({ date: Date.now(), detail: result[i] });
-        }
-      });
+    name: "IPFS Settings",
+    data() {
+        return {
+            connected: false,
+            outputs: [],
+        };
     },
-    disconnect() {
-      this.connected = false;
-      this.outputs.push({ date: Date.now(), detail: "Disconnected to Daemon" });
-      StopIPFS().then((result) => console.log(result));
+    methods: {
+        connect() {
+            this.connected = true;
+            this.outputs.push({ date: Date.now(), detail: "connected" });
+            StartIPFS().then((result) => {
+                console.log(result);
+                for (let i = 0; i < result.length; i++) {
+                    this.outputs.push({ date: Date.now(), detail: result[i] });
+                }
+            });
+        },
+        disconnect() {
+            this.connected = false;
+            this.outputs.push({ date: Date.now(), detail: "Disconnected to Daemon" });
+            StopIPFS().then((result) => console.log(result));
+        },
     },
-  },
+    components: { Title }
 };
 </script>
 

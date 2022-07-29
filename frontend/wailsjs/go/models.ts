@@ -1,3 +1,46 @@
+export namespace wallet {
+	
+	export class Notification {
+	    status: boolean;
+	    message: string;
+	    data: string;
+	
+	    static createFrom(source: any = {}) {
+	        return new Notification(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.status = source["status"];
+	        this.message = source["message"];
+	        this.data = source["data"];
+	    }
+	}
+	export class Wallet {
+	    status: boolean;
+	    message: string;
+	    private_key: string;
+	    public_key: string;
+	    address: string;
+	    path: string;
+	
+	    static createFrom(source: any = {}) {
+	        return new Wallet(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.status = source["status"];
+	        this.message = source["message"];
+	        this.private_key = source["private_key"];
+	        this.public_key = source["public_key"];
+	        this.address = source["address"];
+	        this.path = source["path"];
+	    }
+	}
+
+}
+
 export namespace ipfs {
 	
 	export class FileStatus {
@@ -26,7 +69,6 @@ export namespace ipfs {
 }
 
 export namespace main {
-	
 	
 	export class FileStatus {
 	    name: string;

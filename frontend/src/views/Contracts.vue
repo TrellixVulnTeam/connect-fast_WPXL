@@ -1,17 +1,16 @@
 <script>
 
 import ContractElement from '../components/ContractElement.vue';
+import TitleVue from '../components/DesignElements/Title.vue';
 export default {
     name: "Contracts",
-    components: { ContractElement }
+    components: { ContractElement, TitleVue }
 };
 </script>
 
 <template>
 <main>
-   <h2>
-       Contracts
-       </h2>
+   <TitleVue />
     
     <div class="grid-container">
            <ContractElement />

@@ -4,7 +4,6 @@ import (
 	"context"
 	"crypto/ecdsa"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"math/big"
 
@@ -200,28 +199,12 @@ func (a *App) GetAccount(password string) []user.Wallet {
 	accountwallet := user.Wallet{}
 
 	// now we want to read ls
-	files, err := ioutil.ReadDir("./wallets")
-
-	var d []string
-	if err != nil {
-		fmt.Println("No files has been found \n", err)
-	}
-
-	for _, file := range files {
-		//for first think make
-		if !file.IsDir() {
-			file.Name()
-			d = append(d, file.Name())
-		}
-	}
 
 	//just create the one that is latest settled.
 
-	if len(d) > 0 {
-		result := wallet.GetAccount("./wallets/"+d[0], password)
+	result := wallet.GetAccount("password")
 
-		accountwallet = result
-	}
+	accountwallet = result
 
 	wallets := []user.Wallet{accountwallet}
 	return wallets

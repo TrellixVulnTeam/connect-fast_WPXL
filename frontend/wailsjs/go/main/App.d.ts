@@ -4,38 +4,42 @@ import {wallet} from '../models';
 import {ipfs} from '../models';
 import {main} from '../models';
 
-export function ReadFile(arg1:string):Promise<Array<number>>;
-
-export function GenerateAccount(arg1:string):Promise<wallet.Wallet>;
-
-export function GetBalance(arg1:string):Promise<string>;
-
-export function OpenMessage():void;
-
-export function StartIPFS():Promise<number>;
-
-export function FileStat():Promise<ipfs.FileStatus>;
-
-export function GenerateWallet():Promise<main.Wallet>;
-
-export function CreateDirectory(arg1:string):Promise<boolean>;
-
-export function SelectFile():Promise<main.FileStatus>;
-
-export function TransferFunds():void;
-
 export function AddFile(arg1:string,arg2:string):Promise<boolean>;
 
 export function Connect():Promise<string>;
 
-export function IpfsRun():void;
+export function CreateAccount(arg1:string):Promise<wallet.Notification>;
 
-export function ReadDirectory(arg1:string):Promise<Array<ipfs.FileStatus>>;
+export function CreateDirectory(arg1:string):Promise<boolean>;
 
-export function RemoveFile(arg1:string):Promise<boolean>;
+export function FileStat():Promise<ipfs.FileStatus>;
 
-export function StopIPFS():Promise<boolean>;
+export function GenerateAccount(arg1:string):Promise<wallet.Wallet>;
+
+export function GenerateWallet():Promise<main.Wallet>;
 
 export function GetAccount(arg1:string):Promise<Array<wallet.Wallet>>;
 
+export function GetAccountExist():Promise<boolean>;
+
+export function GetBalance(arg1:string):Promise<string>;
+
 export function Greet(arg1:string):Promise<string>;
+
+export function IpfsRun():void;
+
+export function OpenMessage():void;
+
+export function ReadDirectory(arg1:string):Promise<Array<ipfs.FileStatus>>;
+
+export function ReadFile(arg1:string):Promise<string>;
+
+export function RemoveFile(arg1:string):Promise<boolean>;
+
+export function SelectFile():Promise<main.FileStatus>;
+
+export function StartIPFS():Promise<any>;
+
+export function StopIPFS():Promise<boolean>;
+
+export function TransferFunds():void;

@@ -1,70 +1,117 @@
 <template>
-    <main>
         <div class="content">
-            <h1>Home Settings</h1>
-            
-            <div class="overview">
-                <div class="box">
-                    <h5>IPFS</h5>
-                    <table>
-                        <tr>
-                            <td>Connected</td>
-                            <td>True</td>
-                        </tr>
-                        <tr>
-                            <td>Local Path</td>
-                            <td>~/root/ipfs/</td>
-                        </tr>                      
-                         <tr>
-                            <td>API</td>
-                            <td>/ipfs/127.0.0.1/tcp/5001</td>
-                        </tr>
-                    </table>
+            <div class="standard_info">
+                <div class="info_photo">
+                    <img src="../../assets/images/logo-universal.png" />
+                    
+                    <button>
+                        Edit Photo
+                    </button>
                 </div>
-                 <div class="box">
-                    <h5>Ethereum</h5>
-                     <table>
-                        <tr>
-                            <td>Network</td>
-                            <td>Ethereum</td>
-                        </tr>
-                         <tr>
-                            <td>Default Account</td>
-                            <td>3000</td>
-                        </tr>
-                        <tr>
-                            <td>Wallet Balance</td>
-                            <td>1000.000</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                More details..
-                            </td>
-                        </tr>
-                        </table>
+                <div class="account_info">
+                    <span class="main_account_info">
+                        0x234235434534
+                    </span>
+
+                     <div class="info_row">
+                        <div class="info_label">
+                            Balance:
+                        </div>
+                        <div class="info_value">
+                            200.029384   CTX
+                        </div>
+                        <div class="info_action">
+                            Transactions
+                        </div>
+                    </div>
+                    <div class="info_row">
+                        <div class="info_label">
+                            Email:
+                        </div>
+                        <div class="info_value">
+                            connectfastv1@gmail.com
+                        </div>
+                        <div class="info_action">
+                            Edit
+                        </div>
+                    </div>
+                     <div class="info_row">
+                        <div class="info_label">
+                            Security check:
+                        </div>
+                        <div class="info_value">
+                            not registered
+                        </div>
+                        <div class="info_action" >
+                            Edit
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
-    </main>
+
 </template>
 <style scoped>
-.overview{
+.standard_info{
+    display:flex;
+    flex-direction: row;
+}
+
+.info_photo {
     display: flex;
-    flex-direction: row; 
-    gap: 24px;
+    flex-direction: column;
 }
-.overview .box{
-    flex: 1;
-    padding: 24px;
-    border-radius: 6px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+.info_photo img{
+  height: 128px;
+  width: 128px;
+  border-radius: 12px;  
 }
-.box h5{
-    font-size: 20px;
-    margin: 12px;
+.info_photo button{
+    border: none;
+    background: #21212a;
+    color: white;
+    font-weight: 600;
+    margin-top: 12px;
     text-transform: uppercase;
-    font-weight:300;
+    border-radius: 6px;
+    padding: 12px;
 }
+.account_info{
+    flex: 1;
+    margin-left: 48px;
+}
+.main_account_info{
+   font-size: 18px;
+   font-weight: 600;
+    color: white;
+    padding-bottom: 24px;
+    margin-bottom: 12px;
+}
+
+.info_row{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px;
+    margin: 12px;
+    border-bottom: 1px solid #c2c2c2;
+}
+.info_row .info_label{
+    flex:1;
+}
+.info_row .info_value{
+    flex: 3;
+    color: #c2c2c2;
+}
+
+.info_action:hover{
+    color: #c2c2c2;
+    cursor: pointer;
+}
+hr {
+    border-top: 1px solid #c2c2c2;
+    margin-top: 2rem;
+}
+
 </style>
