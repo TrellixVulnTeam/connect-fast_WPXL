@@ -94,8 +94,8 @@ github.com/tklauser/numcpus v0.5.0 h1:ooe7gN0fg6myJ0EKoTAf5hebTZrH52px3New/D9iJ+
 github.com/tklauser/numcpus v0.5.0/go.mod h1:OGzpTxpcIMNGYQdit2BYL1pvk/dSOaJWjKoflh+RQjo=
 github.com/tkrajina/go-reflector v0.5.6 h1:hKQ0gyocG7vgMD2M3dRlYN6WBBOmdoOzJ6njQSepKdE=
 github.com/tkrajina/go-reflector v0.5.6/go.mod h1:ECbqLgccecY5kPmPmXg1MrHW585yMcDkVl6IvJe64T4=
-github.com/tse-lao/ether-user v0.0.0-20220729100445-e1e6d65976e8 h1:jL4jwczfClQRYRCs++AnrkVViEDzOMJBz/TDh6zkjAU=
-github.com/tse-lao/ether-user v0.0.0-20220729100445-e1e6d65976e8/go.mod h1:1THlVyDlr1b2QCUaiYz+EBLCRnsdRKFWabAPwwcAYas=
+github.com/tse-lao/ether-user v0.0.0-20220729120324-743da7201951 h1:65eehuW0KzcF5uxJ27/lnO8pn/pjfoqNjbZR5pvxMZw=
+github.com/tse-lao/ether-user v0.0.0-20220729120324-743da7201951/go.mod h1:1THlVyDlr1b2QCUaiYz+EBLCRnsdRKFWabAPwwcAYas=
 github.com/tse-lao/ipfs-user v0.0.6 h1:I3NpwRksmhJT49hBy23BFPblthU/Udsf4Inx8lsAaEo=
 github.com/tse-lao/ipfs-user v0.0.6/go.mod h1:SZrBKr+N6exNPMqGlc9VZeMPQ/+MLrdDEN1d6rUYdCg=
 github.com/tyler-smith/go-bip39 v1.0.1-0.20181017060643-dbb3b84ba2ef h1:wHSqTBrZW24CsNJDfeh9Ex6Pm0Rcpc7qrgKBiL44vF4=

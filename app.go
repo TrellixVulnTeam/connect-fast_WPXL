@@ -202,7 +202,7 @@ func (a *App) GetAccount(password string) []user.Wallet {
 
 	//just create the one that is latest settled.
 
-	result := wallet.GetAccount("password")
+	result := wallet.GetAccount(password)
 
 	accountwallet = result
 

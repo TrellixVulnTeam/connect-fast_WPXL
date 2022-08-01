@@ -125,14 +125,22 @@ export default {
     
   },
   created() {
-    ReadDirectory("").then((result) => {
+   
+    
+    if(this.files.length <= 0){
+       this.loading = true;
+       ReadDirectory("").then((result) => {
         if(result.length < 1){
             console.timeLog("no files in the directory")
         }
        for(var i = 0; i < result.length; i++){
             this.files.push(result[i])
+            
+            this.loading = false;
         }
     })
+    }
+   
   },
 };
 

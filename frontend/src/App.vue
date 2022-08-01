@@ -1,6 +1,9 @@
 <script>
 //TODO: Check if there is a connection with ethereum.
+
 import { store } from "./compositions/store";
+
+
 
 //check if there is localhost storage
 export default {
@@ -17,7 +20,7 @@ export default {
       <div id="nav">
         <div id="logo">
           <img
-            src="./assets/icons/web-technology/display.svg"
+            src="./assets/images/logo.png"
             class="nav-item-icon"
           />
         </div>
@@ -52,6 +55,13 @@ export default {
           />
           <router-link to="/contracts">Contracts</router-link>
         </div>
+        
+        
+        <div class="bottom-settings">
+            <img src="./assets/icons/interface-sign/more-alt.svg" />
+            
+            <img src="./assets/images/logo-universal.png" />
+        </div>
       </div>
     </div>
     <div id="content">
@@ -71,6 +81,12 @@ export default {
   bottom: 0;
   overflow-y: auto;
 }
+#logo img{
+  filter: invert(0);
+  width: 32px;
+  height: 32px;
+  opacity: 100%;
+}
 #logo {
   display: block;
   width: 50%;
@@ -81,6 +97,8 @@ export default {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-origin: content-box;
+  margin-bottom: 24px;
+  margin-top: 24px;
 }
 #nav {
   width: 100%;
@@ -124,6 +142,18 @@ export default {
   fill: #f4f9ff;
   color: #f4f9ff;
   filter: brightness(3) invert(1);
+}
+
+.bottom-settings{
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cacacc;
+  gap: 12px;
+  margin: 20px;
+  padding: 8px 4px;
+  border-radius: 6px;
+  align-items: center;
 }
 
 #content {

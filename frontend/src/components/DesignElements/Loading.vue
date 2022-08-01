@@ -1,25 +1,61 @@
 <template>
- <main>
-    <div class="spinner"></div>
-
- </main>   
+ <div class="page-loader">
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+  </div>
 </template>
-<style scoped>
-svg {
-  max-width: 25em;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px #000;
-  background: #111;
-  fill: none;
-  stroke: #222;
-  stroke-linecap: round;
-  stroke-width: 8%
-}
-
-use {
-  stroke: #fff;
-  animation: a 2s linear infinite
-}
-
-@keyframes a { to { stroke-dashoffset: 0px } }
+<style lang="scss" scoped>
+ $colors: #8cc271, #69BEEB, #F5AA39, #E9643B;
+ 
+ .page-loader{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .cube{
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+  
+  @for $i from 1 through length($colors){
+    &:nth-child(#{$i}){
+      background-color: nth($colors, $i);
+    }
+  }
+  
+  &:first-child{
+    animation: left 1s infinite;
+  }
+  
+   &:last-child{
+    animation: right 1s infinite .5s;
+  }
+ }
+ 
+ @keyframes left{
+  40%{
+    transform: translateX(-60px)
+  }
+  50%{
+     transform: translateX(0)
+  }
+ }
+ 
+  @keyframes right{
+  40%{
+    transform: translateX(60px)
+  }
+  50%{
+     transform: translateX(0)
+  }
+ }
+ 
+ 
+ 
+ 
 </style>

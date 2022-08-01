@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
+    "@polkadot/vue-identicon": "^2.9.3",
     "@xkeshi/image-compressor": "^0.5.3",
     "axios": "^0.27.2",
     "carbon-components": "^10.56.0",
@@ -18,13 +19,15 @@
     "vue-router": "^4.0.15",
     "vue-toastification": "^1.7.14",
     "vue-upload-component": "^2.8.22",
+    "vue3-charts": "^1.1.31",
     "vuetify": "^2.6.6",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
     "node-sass": "^7.0.1",
-    "sass-loader": "^13.0.0",
+    "sass": "^1.54.0",
+    "sass-loader": "^10.3.1",
     "vite": "^2.9.5",
     "vue-svg-loader": "^0.16.0"
   }

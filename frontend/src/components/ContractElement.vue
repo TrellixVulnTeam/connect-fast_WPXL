@@ -11,22 +11,11 @@ export default {
 <template>
   <main>
     <div class="box" @click="$router.push('/contract/100')">
-      <h1 class="title">Data collection for improvement of product.</h1>
-
-      <div class="box-content">
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          auctor tempor libero, eget consectetur nisl viverra eu. Ut fringilla
-          tempor metus, non imperdiet eros rhoncus eu. Cras euismod orci quam,
-          eget blandit augue porttitor a. Aliquam quam erat, tincidunt sed
-          ornare quis, convallis a mi. Etiam sit amet accumsan purus. Sed id
-          justo a nisi blandit condimentum. Nam eu libero turpis. In varius quam
-          ante, sed euismod neque condimentum at. Maecenas efficitur fermentum
-          interdum. Suspendisse rhoncus pharetra mi, non vulputate urna suscipit
-          at. Vestibulum in maximus ante, sed consectetur lectus.
-        </p>
+      <div class="main_info">
+         <h1 class="title">Data collection for improvement of product.</h1>
       </div>
-      <div class="box-extra">
+    <div class="bottom">
+       <div class="box-extra">
         <table class="additional">
           <tr>
             <td>Owner</td>
@@ -49,6 +38,8 @@ export default {
             <td>No</td>
           </tr>
         </table>
+      </div>
+      <div class="box-extra">
         <table class="additional">
           <tr>
             <td>Start date</td>
@@ -77,24 +68,38 @@ export default {
         <ProgressBar />
       </div>
     </div>
+     
+    </div>
   </main>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .box {
   border-radius: 4px;
-  background: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 300px;
+  align-items: left;
   padding: 24px;
+  border: 1px solid #c2c3c2;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    
+  .main-info{
+    h1{
+      font-size:12px;
+    }
+  }
+  
+  .bottom{
+    display: flex;
+    flex-direction: row;
+  }
+  
 }
 .box:hover{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
 }
 .title {
   font-size: 18px;

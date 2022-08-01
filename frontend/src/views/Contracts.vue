@@ -10,7 +10,7 @@ export default {
 
 <template>
 <main>
-   <TitleVue />
+   <TitleVue title="Contracts"/>
     
     <div class="grid-container">
            <ContractElement />
@@ -23,6 +23,10 @@ export default {
     
 </template>
 <style scoped>
+main{
+    margin: 24px;
+    padding: 0;
+}
 .grid-container{
     display: flex;
     flex-wrap: wrap;
