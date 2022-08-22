@@ -12,6 +12,10 @@ export function CreateAccount(arg1:string):Promise<wallet.Notification>;
 
 export function CreateDirectory(arg1:string):Promise<boolean>;
 
+export function DecryptData(arg1:string):Promise<string>;
+
+export function EncryptToSmart(arg1:string,arg2:string):Promise<string>;
+
 export function FileStat():Promise<ipfs.FileStatus>;
 
 export function GenerateAccount(arg1:string):Promise<wallet.Wallet>;
@@ -23,6 +27,8 @@ export function GetAccount(arg1:string):Promise<Array<wallet.Wallet>>;
 export function GetAccountExist():Promise<boolean>;
 
 export function GetBalance(arg1:string):Promise<string>;
+
+export function GetIPFS(arg1:string):Promise<string>;
 
 export function Greet(arg1:string):Promise<string>;
 
@@ -43,3 +49,5 @@ export function StartIPFS():Promise<any>;
 export function StopIPFS():Promise<boolean>;
 
 export function TransferFunds():void;
+
+export function WriteFile(arg1:string,arg2:string):Promise<string>;

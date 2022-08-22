@@ -4,8 +4,8 @@ go 1.17
 
 require (
 	github.com/ethereum/go-ethereum v1.10.20
-	github.com/tse-lao/ether-user v0.0.0-20220729120324-743da7201951
-	github.com/tse-lao/ipfs-user v0.0.6
+	github.com/tse-lao/ether-user v0.0.0-20220801131404-6defee143e72
+	github.com/tse-lao/ipfs-user v0.0.8-0.20220805085325-559fcca8a87e
 	github.com/wailsapp/wails/v2 v2.0.0-beta.39.2
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa
 )
@@ -21,6 +21,7 @@ require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
 	github.com/jchv/go-winloader v0.0.0-20210711035445-715c2860da7e // indirect
+	github.com/joho/godotenv v1.4.0 // indirect
 	github.com/labstack/echo/v4 v4.7.2 // indirect
 	github.com/labstack/gommon v0.3.1 // indirect
 	github.com/leaanthony/go-ansi-parser v1.5.0 // indirect
@@ -41,7 +42,7 @@ require (
 	github.com/wailsapp/mimetype v1.4.1 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	golang.org/x/net v0.0.0-20220615171555-694bf12d69de // indirect
-	golang.org/x/sys v0.0.0-20220722155257-8c9f86f7a55f // indirect
+	golang.org/x/sys v0.0.0-20220804214406-8e32c043e418 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce // indirect
 )

@@ -18,6 +18,14 @@ export function CreateDirectory(arg1) {
   return window['go']['main']['App']['CreateDirectory'](arg1);
 }
 
+export function DecryptData(arg1) {
+  return window['go']['main']['App']['DecryptData'](arg1);
+}
+
+export function EncryptToSmart(arg1, arg2) {
+  return window['go']['main']['App']['EncryptToSmart'](arg1, arg2);
+}
+
 export function FileStat() {
   return window['go']['main']['App']['FileStat']();
 }
@@ -40,6 +48,10 @@ export function GetAccountExist() {
 
 export function GetBalance(arg1) {
   return window['go']['main']['App']['GetBalance'](arg1);
+}
+
+export function GetIPFS(arg1) {
+  return window['go']['main']['App']['GetIPFS'](arg1);
 }
 
 export function Greet(arg1) {
@@ -80,4 +92,8 @@ export function StopIPFS() {
 
 export function TransferFunds() {
   return window['go']['main']['App']['TransferFunds']();
+}
+
+export function WriteFile(arg1, arg2) {
+  return window['go']['main']['App']['WriteFile'](arg1, arg2);
 }

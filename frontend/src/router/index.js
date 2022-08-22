@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import ContractsSettings from '../components/Settings/ContractsSettings.vue'
 import EthereumSettings from '../components/Settings/EthereumSettings.vue'
+import ExtraSettings from '../components/Settings/ExtraSettings.vue'
 import HomeSettings from '../components/Settings/HomeSettings.vue'
 import IpfsSettings from '../components/Settings/IpfsSettings.vue'
 import About from '../views/About.vue'
 import ContractDetail from '../views/ContractDetail.vue'
 import Contracts from '../views/Contracts.vue'
 import Files from '../views/Files.vue'
-import Home from '../views/Home.vue'
 import Settings from '../views/Settings.vue'
 
 
@@ -14,7 +15,7 @@ const routes = [
   {
     path: '/', 
     name: 'Home', 
-    component: Home
+    component: EthereumSettings
   }, 
   {
     path: '/about',
@@ -35,6 +36,8 @@ const routes = [
       {path: '', component: HomeSettings  }, 
       {path: 'ethereum', component: EthereumSettings}, 
       {path: 'ipfs', component: IpfsSettings}, 
+      {path: 'contracts', component: ContractsSettings},
+      {path: 'extra', component: ExtraSettings}
     ]
   }, 
   {

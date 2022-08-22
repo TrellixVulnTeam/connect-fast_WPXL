@@ -1,30 +1,3 @@
-export namespace ipfs {
-	
-	export class FileStatus {
-	    name: string;
-	    cat: string;
-	    size: number;
-	    cumlativeSize: number;
-	    childBlocks: number;
-	    fileType: string;
-	
-	    static createFrom(source: any = {}) {
-	        return new FileStatus(source);
-	    }
-	
-	    constructor(source: any = {}) {
-	        if ('string' === typeof source) source = JSON.parse(source);
-	        this.name = source["name"];
-	        this.cat = source["cat"];
-	        this.size = source["size"];
-	        this.cumlativeSize = source["cumlativeSize"];
-	        this.childBlocks = source["childBlocks"];
-	        this.fileType = source["fileType"];
-	    }
-	}
-
-}
-
 export namespace main {
 	
 	
@@ -55,6 +28,22 @@ export namespace main {
 
 export namespace wallet {
 	
+	export class Notification {
+	    status: boolean;
+	    message: string;
+	    data: string;
+	
+	    static createFrom(source: any = {}) {
+	        return new Notification(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.status = source["status"];
+	        this.message = source["message"];
+	        this.data = source["data"];
+	    }
+	}
 	export class Wallet {
 	    status: boolean;
 	    message: string;
@@ -77,20 +66,31 @@ export namespace wallet {
 	        this.path = source["path"];
 	    }
 	}
-	export class Notification {
-	    status: boolean;
-	    message: string;
-	    data: string;
+
+}
+
+export namespace ipfs {
+	
+	export class FileStatus {
+	    name: string;
+	    cat: string;
+	    size: number;
+	    cumlativeSize: number;
+	    childBlocks: number;
+	    fileType: string;
 	
 	    static createFrom(source: any = {}) {
-	        return new Notification(source);
+	        return new FileStatus(source);
 	    }
 	
 	    constructor(source: any = {}) {
 	        if ('string' === typeof source) source = JSON.parse(source);
-	        this.status = source["status"];
-	        this.message = source["message"];
-	        this.data = source["data"];
+	        this.name = source["name"];
+	        this.cat = source["cat"];
+	        this.size = source["size"];
+	        this.cumlativeSize = source["cumlativeSize"];
+	        this.childBlocks = source["childBlocks"];
+	        this.fileType = source["fileType"];
 	    }
 	}
 

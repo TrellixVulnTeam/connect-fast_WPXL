@@ -4,69 +4,27 @@ import ProgressBar from "./DesignElements/ProgressBar.vue";
 
 export default {
   name: "Contract Element",
-  components: { ProgressBar }
+  components: { ProgressBar }, 
+  props: {
+    data:{
+      type: String, 
+    }
+  }
 };
 </script>
 
 <template>
   <main>
-    <div class="box" @click="$router.push('/contract/100')">
+    <div class="box" @click="$router.push({path: `/contract/${data}`, params: {id:data}})">
       <div class="main_info">
-         <h1 class="title">Data collection for improvement of product.</h1>
+         <h1 class="title">Update needed for this. </h1>
       </div>
     <div class="bottom">
-       <div class="box-extra">
-        <table class="additional">
-          <tr>
-            <td>Owner</td>
-            <td>Facebook</td>
-          </tr>
-          <tr>
-            <td>Reward</td>
-            <td>10 dCFX</td>
-          </tr>
-          <tr>
-            <td>Min participants</td>
-            <td>100.000</td>
-          </tr>
-          <tr>
-            <td>Data Privacy</td>
-            <td>High</td>
-          </tr>
-          <tr>
-            <td>Resell rights</td>
-            <td>No</td>
-          </tr>
-        </table>
-      </div>
+      
       <div class="box-extra">
-        <table class="additional">
-          <tr>
-            <td>Start date</td>
-            <td>10-10-2022 10:23</td>
-          </tr>
-          <tr>
-            <td>End Date</td>
-            <td>04-11-2022 21:34</td>
-          </tr>
-          <tr>
-            <td>Current Participants</td>
-            <td>1.000</td>
-          </tr>
-          <tr>
-            <td>Max Participants</td>
-            <td>unlimited</td>
-          </tr>
-          <tr>
-            <td>Country</td>
-            <td>United States of America</td>
-          </tr>
-        </table>
+        Contract: {{data}}
       </div>
 
-      <div style="width: 100%">
-        <ProgressBar />
-      </div>
     </div>
      
     </div>

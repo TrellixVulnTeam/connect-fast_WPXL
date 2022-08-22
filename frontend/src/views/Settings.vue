@@ -8,8 +8,11 @@
         <div @click="$router.push('/settings/ethereum')">
           Ethereum 
         </div>
-        <div @click="$router.push('/settings/ipfs')">
+        <div @click="$router.push('/settings/extra')">
           IPFS
+        </div>
+         <div @click="$router.push('/settings/contracts')">
+          Contracts
         </div>
     </div>
 

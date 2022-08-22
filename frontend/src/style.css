@@ -14,6 +14,9 @@ body {
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
 }
+.formkit-input{
+    color: white  !important;
+}
 
 @font-face {
     font-family: "Nunito";
@@ -44,4 +47,23 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     font-size: 24px;
+}
+
+.btn-success{
+    margin: 6px;
+    padding: 8px 12px;
+    background-color: #b0f3e4;
+    font-size:14px;
+    border: 1px solid #b0f3e4;
+    border-radius: 6px;
+    
+}
+.btn-danger{
+    margin: 6px;
+    padding: 8px 12px;
+    background-color: #f3b0b0;
+    font-size:14px;
+    border: 1px solid #f3b0b0;
+    border-radius: 6px;
+    
 }

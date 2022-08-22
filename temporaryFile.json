@@ -1,0 +1,1 @@
+{"data":{"title":"Simple textarea","description":"This will be a simple text area where people can write something.\nThe reward will be 0.01 MATIC ","fee":"0.01","endDate":"2022-09-09","codedData":true},"form":[{"type":"textarea","name":"Textarea","label":"Please write anything you want. ","open":true,"$formkit":"textarea"}]}

@@ -14,5 +14,7 @@ export const store = reactive({
             this.filePath += "/" + newPath
         }
     }
+    
+    
 
 })

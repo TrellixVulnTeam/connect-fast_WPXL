@@ -50,7 +50,7 @@ func (a *App) Connect() string {
 
 	//now we implement to the ethereum dial
 
-	client, err := ethclient.Dial("wss://rpc-mainnet.matic.network")
+	client, err := ethclient.Dial("http://127.0.0.1:7545")
 
 	if err != nil {
 		return fmt.Sprint(err)

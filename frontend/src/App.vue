@@ -31,6 +31,14 @@ export default {
           />
           <router-link to="/">Home</router-link>
         </div>
+         <div class="nav-item" @click="$router.push('/contracts')">
+          <img
+            class="nav-item-icon"
+            src="./assets/icons/file-1.svg"
+            alt="Dashboard"
+          />
+          <router-link to="/contracts">Contracts</router-link>
+        </div>
         <div class="nav-item" @click="$router.push('/files')">
           <img
             class="nav-item-icon"
@@ -47,14 +55,7 @@ export default {
           />
           <router-link to="/settings">Settings</router-link>
         </div>
-        <div class="nav-item" @click="$router.push('/contracts')">
-          <img
-            class="nav-item-icon"
-            src="./assets/icons/file-1.svg"
-            alt="Dashboard"
-          />
-          <router-link to="/contracts">Contracts</router-link>
-        </div>
+       
         
         
         <div class="bottom-settings">

@@ -30,7 +30,5 @@
 .option:hover{
     background: #2e2e2e;
     cursor: pointer;
-    
-    
 }
 </style>
